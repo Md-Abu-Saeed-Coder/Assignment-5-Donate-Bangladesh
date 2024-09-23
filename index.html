@@ -11,13 +11,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
+    <!-- variable Class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navColor: '#F9F7F3',
+                        btnColor: '#B4F461',
+                    }
+                }
+            }
+        }
+    </script>
     <title>Document</title>
 </head>
 
 <body class="font-family: Lexend;">
-  
+    <nav class="bg-navColor">
+        <header class="container m-auto py-6">
 
+            <div class="navbar">
+                <div class="navbar-start">
+                    <button class="btn bg-btnColor text-xl font-semibold px-8">Blog</button>
+                </div>
+                <div class="navbar-center">
+                    <a class="btn btn-ghost text-xl font-semibold"><img class="pr-4" src="assets/logo.png" alt="">
+                        Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end">
+                    <img class="pr-3" src="assets/coin.png" alt="">
+                    <p class="font-medium text-xl text-[ #111111B3]">5500 BDT</p>
+                </div>
+            </div>
+        </header>
+    </nav>
+    <main></main>
+    <footer></footer>
 
 
     <script src="./javascript/index.js"></script>
