@@ -29,30 +29,32 @@
 </head>
 
 <body class="font-family: Lexend;">
-    <nav class="bg-navColor ">
-        <header class="container m-auto py-6">
+    <nav class="sticky top-0  z-10 ">
+        <div class="bg-navColor ">
+            <header class="container m-auto py-6">
 
-            <div class="navbar">
-                <div class="navbar-start">
-                    <button id="blog-btn" class="btn bg-btnColor text-xl font-semibold px-8">Blog</button>
+                <div class="navbar">
+                    <div class="navbar-start">
+                        <button id="blog-btn" class="btn bg-btnColor text-xl font-semibold px-8">Blog</button>
+                    </div>
+                    <div class="navbar-center">
+                        <a class="btn btn-ghost text-xl font-semibold"><img class="pr-4" src="assets/logo.png" alt="">
+                            <span class=" hidden lg:inline-block ">Donate Bangladesh</span></a>
+                    </div>
+                    <div class="navbar-end">
+                        <img class="pr-3" src="assets/coin.png" alt="">
+                        <p class="font-medium text-xl text-[ #111111B3]"> <span id="total-amount">5500</span> BDT</p>
+                    </div>
                 </div>
-                <div class="navbar-center">
-                    <a class="btn btn-ghost text-xl font-semibold"><img class="pr-4" src="assets/logo.png" alt="">
-                        <span class=" hidden lg:inline-block ">Donate Bangladesh</span></a>
-                </div>
-                <div class="navbar-end">
-                    <img class="pr-3" src="assets/coin.png" alt="">
-                    <p class="font-medium text-xl text-[ #111111B3]"> <span id="total-amount">5500</span> BDT</p>
-                </div>
-            </div>
-        </header>
-    </nav>
-    <main>
-        <div class="manu-btn text-center py-20 space-x-4">
+            </header>
+        </div>
+        <div class="manu-btn text-center pt-6 space-x-4 ">
             <button id="donation-btn" class="text-xl font-semibold py-4 px-8 bg-btnColor rounded-lg">Donation</button>
             <button id="history-btn"
                 class="text-xl font-semibold py-4 px-8 border-2 border-primaryColor rounded-lg">History</button>
         </div>
+    </nav>
+    <main class="mt-8">
         <!-- Section part -->
         <section class="space-y-8">
             <!-- Section part Noakhali o1-->
