@@ -1,6 +1,5 @@
-const theme=document.getElementsByTagName('html')[0];
-theme.setAttribute('data-theme',"light")
-
+const theme = document.getElementsByTagName("html")[0];
+theme.setAttribute("data-theme", "light");
 
 // Donate for Flood at Noakhali 01
 
@@ -9,75 +8,105 @@ theme.setAttribute('data-theme',"light")
 //     document.getElementById(id).classList.remove('hidden') ;
 // }
 
+document
+  .getElementById("noakhali-onate-btn")
+  .addEventListener("click", function () {
+    const noakhaliInput = parseFloat(
+      document.getElementById("noakhali-input").value
+    );
 
-document.getElementById('noakhali-onate-btn').addEventListener('click' ,function(){
+    if (noakhaliInput > 0 && noakhaliInput !== "string") {
+      let totalAmount = parseFloat(
+        document.getElementById("total-amount").innerText
+      );
 
-    const noakhaliInput=parseFloat(document.getElementById('noakhali-input').value );
-
-    if(noakhaliInput>0 && noakhaliInput!=="string" ){
-        let totalAmount=parseFloat(document.getElementById('total-amount').innerText) ;
-
-       let totalBalance =totalAmount-noakhaliInput ;
-       document.getElementById("total-amount").innerText=totalBalance
-       let noakhaliAmount=parseFloat(document.getElementById('noakhali-amount').innerText) ;
-
-
-       let newBalance=noakhaliAmount + noakhaliInput
-
-       document.getElementById('my_modal_1').showModal()
-       
-       document.getElementById('noakhali-amount').innerText=newBalance
-
-    }else{
-        alert("Failed to add money")
+      if (totalAmount >= noakhaliInput) {
+        let totalBalance = totalAmount - noakhaliInput;
+        document.getElementById("total-amount").innerText = totalBalance;
+        let noakhaliAmount = parseFloat(
+          document.getElementById("noakhali-amount").innerText
+        );
+        let newBalance = noakhaliAmount + noakhaliInput;
+        document.getElementById("noakhali-amount").innerText = newBalance;
+        document.getElementById("my_modal_1").showModal();
+      } else {
+        alert("insufficent balance");
+      }
+    } else {
+      alert("Failed to add money");
     }
-    // mymodal1showModal('my_modal_1')
-})
+  });
 
 // Donate for Flood Relief in Feni,02
 
-document.getElementById('feni-onate-btn').addEventListener('click', function(){
-    let feniInput = parseFloat(document.getElementById('feni-input').value) ;
-    
-    if(feniInput >0 && feniInput !== "string"){
-        let totalAmount = parseFloat(document.getElementById('total-amount').innerText) ;
+document
+  .getElementById("feni-onate-btn")
+  .addEventListener("click", function () {
+    let feniInput = parseFloat(document.getElementById("feni-input").value);
 
-        let total= totalAmount - feniInput ;
-        document.getElementById('total-amount').innerText=total
+    if (feniInput > 0 && feniInput !== "string") {
+      let totalAmount = parseFloat(
+        document.getElementById("total-amount").innerText
+      );
 
-        let feniAmount= parseFloat(document.getElementById('feni-amount').innerText) ;
-        
-        let newBalance = feniAmount +feniInput ;
-        document.getElementById("feni-amount").innerText=newBalance ;
-        document.getElementById('my_modal_1').showModal()
+      if (totalAmount >= feniInput) {
+        let total = totalAmount - feniInput;
+        document.getElementById("total-amount").innerText = total;
 
-    
-    }else{
-        alert("Failed to add money")
+        let feniAmount = parseFloat(
+          document.getElementById("feni-amount").innerText
+        );
+
+        let newBalance = feniAmount + feniInput;
+        document.getElementById("feni-amount").innerText = newBalance;
+        document.getElementById("my_modal_1").showModal();
+      } else {
+        alert("insufficent balance");
+      }
+    } else {
+      alert("Failed to add money");
     }
-
-})
-
+  });
 
 // Aid for Injured in the Quota Movement 03
 
-document.getElementById("quota-onate-btn").addEventListener("click" ,function(){
-    let quotaInput=parseFloat(document.getElementById("quota-input").value) ;
+document
+  .getElementById("quota-onate-btn")
+  .addEventListener("click", function () {
+    let quotaInput = parseFloat(document.getElementById("quota-input").value);
 
-    if(quotaInput >0 && quotaInput ){
-        let totalAmount=parseFloat(document.getElementById('total-amount').innerText) ;
+    if (quotaInput > 0 && quotaInput) {
+      let totalAmount = parseFloat(
+        document.getElementById("total-amount").innerText
+      );
 
-        let total= totalAmount - quotaInput;
-        document.getElementById('total-amount').innerText=total ;
+      if (totalAmount >= quotaInput) {
+        let total = totalAmount - quotaInput;
+        document.getElementById("total-amount").innerText = total;
 
-        let quotaAmount= parseFloat(document.getElementById('quota-amount').innerText );
-        let newBalance= quotaAmount + quotaInput ;
-        document.getElementById('quota-amount').innerText=newBalance ;
-        document.getElementById('my_modal_1').showModal()
-
-    }else{
-        alert("Failed to add money")
+        let quotaAmount = parseFloat(
+          document.getElementById("quota-amount").innerText
+        );
+        let newBalance = quotaAmount + quotaInput;
+        document.getElementById("quota-amount").innerText = newBalance;
+        document.getElementById("my_modal_1").showModal();
+      } else {
+        alert("insufficent balance");
+      }
+    } else {
+      alert("Failed to add money");
     }
-})
+  });
 
+// --------------------------history-btn------------------------------------
 
+let donationBtn = document.getElementById("donation-btn");
+let historyBtn = document.getElementById("history-btn");
+const history = document
+  .getElementById("history-btn")
+  .addEventListener("click", function () {
+    historyBtn.classList.add("bg-btnColor");
+    donationBtn.classList.remove("bg-btnColor");
+
+    document.getElementById("donation-setion").classList.add("hidden");
+  });
