@@ -91,9 +91,10 @@
     </main>
     <script src="./javascript/index.js"></script>
     <script>
-        document.getElementById('go-home-page').addEventListener('click', function () {
-            window.location.href = "./index.html"
-        })
+        document.getElementById('home-btn').addEventListener('click',function(event){
+            event.preventDefault();
+            window.location.href='./index.html'
+        });
     </script>
 </body>
 

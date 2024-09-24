@@ -158,16 +158,18 @@ document.getElementById("donation-btn").addEventListener("click", function () {
 
 
 
-// history Tam
-// let historyall = document.getElementById("history-section");
+let historyall = document.getElementById("history-section");
 
-// let historyItems = document.createElement("div");
-// historyItems.className =
-//   // History Round Border
-//   "bg-white p-4 rounded-md border-1-2 border-black-600";
-// historyItems.innerHTML = `
-//      <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
-//      <h2 class="font-bold text-xl mb-2">${noakhaliInput} Taka is Donated for famine-2024 at Feni, Bangladesh </h2>
+let historyItems = document.createElement("div");
+historyItems.className =
+  // History Round Border
+  "bg-white p-4 rounded-md border mt-4";
+historyItems.innerHTML = `
+     <p class="text-smallText">Date :
+     ${new Date().toLocaleDateString()} 
+     ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+
+     <h2 class="font-bold text-xl mb-2">${noakhaliInput} Taka is Donated for famine-2024 at Feni, Bangladesh </h2>
     
-//   `;
-// historyall.insertBefore(historyItems, historyall.firstChild);
+  `;
+historyall.insertBefore(historyItems, historyall.firstChild);
