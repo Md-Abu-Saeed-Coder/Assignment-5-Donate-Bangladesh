@@ -2,12 +2,6 @@ const theme = document.getElementsByTagName("html")[0];
 theme.setAttribute("data-theme", "light");
 
 // Donate for Flood at Noakhali 01
-
-// function mymodal1showModal(id){
-//     document.getElementById("my_modal_1").classList.add('hidden') ;
-//     document.getElementById(id).classList.remove('hidden') ;
-// }
-
 document
   .getElementById("noakhali-onate-btn")
   .addEventListener("click", function () {
@@ -29,6 +23,18 @@ document
         let newBalance = noakhaliAmount + noakhaliInput;
         document.getElementById("noakhali-amount").innerText = newBalance;
         document.getElementById("my_modal_1").showModal();
+
+        let historyall = document.getElementById("history-section");
+
+        // History
+        let historyItems = document.createElement("div");
+        historyItems.className =
+          // History Round Border
+          "bg-white p-4 rounded-md border mt-4 ";
+        historyItems.innerHTML = `
+               <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+               <h2 class="font-bold text-xl mb-2">${noakhaliInput} Taka is Donated for famine-2024 at Feni, Bangladesh </h2>`;
+        historyall.insertBefore(historyItems, historyall.firstChild);
       } else {
         alert("insufficent balance");
       }
@@ -60,6 +66,18 @@ document
         let newBalance = feniAmount + feniInput;
         document.getElementById("feni-amount").innerText = newBalance;
         document.getElementById("my_modal_1").showModal();
+
+        // history
+        let historyall = document.getElementById("history-section");
+
+        let historyItems = document.createElement("div");
+        historyItems.className =
+          // History Round Border
+          "bg-white p-4 rounded-md border mt-4 ";
+        historyItems.innerHTML = `
+        <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+        <h2 class="font-bold text-xl mb-2">${feniInput}Donate for Flood Relief in Feni,Bangladesh </h2>`;
+        historyall.insertBefore(historyItems, historyall.firstChild);
       } else {
         alert("insufficent balance");
       }
@@ -90,6 +108,20 @@ document
         let newBalance = quotaAmount + quotaInput;
         document.getElementById("quota-amount").innerText = newBalance;
         document.getElementById("my_modal_1").showModal();
+
+        // history
+        let historyall = document.getElementById("history-section");
+
+        let historyItems = document.createElement("div");
+        historyItems.className =
+          // History Round Border
+          "bg-white p-4 rounded-md border mt-4 ";
+        historyItems.innerHTML = `
+        <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+        <h2 class="font-bold text-xl mb-2">${quotaInput}Donate for Flood Relief in Feni,Bangladesh </h2>`;
+        historyall.insertBefore(historyItems, historyall.firstChild);
+
+        
       } else {
         alert("insufficent balance");
       }
@@ -109,4 +141,33 @@ const history = document
     donationBtn.classList.remove("bg-btnColor");
 
     document.getElementById("donation-setion").classList.add("hidden");
+    document.getElementById("history").classList.remove("hidden");
   });
+
+document.getElementById("donation-btn").addEventListener("click", function () {
+  donationBtn.classList.add("bg-btnColor");
+  historyBtn.classList.remove("bg-btnColor");
+
+  document.getElementById("donation-setion").classList.remove("hidden");
+  document.getElementById("history").classList.add("hidden");
+});
+
+
+
+
+
+
+
+// history Tam
+// let historyall = document.getElementById("history-section");
+
+// let historyItems = document.createElement("div");
+// historyItems.className =
+//   // History Round Border
+//   "bg-white p-4 rounded-md border-1-2 border-black-600";
+// historyItems.innerHTML = `
+//      <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+//      <h2 class="font-bold text-xl mb-2">${noakhaliInput} Taka is Donated for famine-2024 at Feni, Bangladesh </h2>
+    
+//   `;
+// historyall.insertBefore(historyItems, historyall.firstChild);

@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://daisyui.com/docs/cdn/ -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- variable Class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navColor: '#F9F7F3',
+                        btnColor: '#B4F461',
+                        primaryColor: '#111111B3'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Document</title>
 </head>
-<body>
-    
+
+<body class="font-family: Lexend;">
+    <nav class="sticky top-0  z-10  backdrop-blur-[10px] "></nav>
+    <div class="bg-navColor ">
+        <header class="container m-auto py-6">
+
+            <div class="navbar">
+                <div class="navbar-start">
+                    <button id="home-btn" class="btn bg-btnColor text-xl font-semibold px-8">Home</button>
+                </div>
+                <div class="navbar-center">
+                    <a class=" flex items-center text-xl font-semibold">
+                        <img class="pr-4" src="assets/logo.png" alt="">
+                        <span class=" hidden lg:inline-block ">Donate Bangladesh</span>
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <img class="pr-3" src="assets/coin.png" alt="">
+                    <p class="font-medium text-xl text-[ #111111B3]"> <span id="total-amount">5500</span> BDT</p>
+                </div>
+            </div>
+        </header>
+    </div>
+    </nav>
+    <main class="container mx-auto mt-20">
+        <h1 class="font-bold text-5xl">Important FAQ !!</h1>
+        <div class="collapse collapse-arrow bg-base-200 mt-10">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is a flood? </div>
+            <div class="collapse-content">
+                <p> A flood is a natural disaster where water overflows onto normally dry land.
+                    This can happen due to heavy rainfall, ocean waves, rapid snowmelt, or the breaking of dams.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is a flash flood?</div>
+            <div class="collapse-content">
+                <p>A flash flood is a sudden and rapid flooding event, usually caused by heavy rainfall. It occurs quickly and provides little time for people to move to safety.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What should you do during a flood?</div>
+            <div class="collapse-content">
+                <p>1.Move to higher ground. <br>
+                    2.Turn off electricity and gas connections. <br>
+                    3.Seek shelter in a safe place.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What should you do after a flood?</div>
+            <div class="collapse-content">
+                <p>1.Do not enter your home until it is declared safe. <br>
+                   2.Check the safety of drinking water. <br>
+                   3.Clean up affected areas. <br>
+                    4.Follow local authorities’ instructions.</p>
+            </div>
+        </div>
+
+    </main>
+    <script src="./javascript/index.js"></script>
+    <script>
+        document.getElementById('go-home-page').addEventListener('click', function () {
+            window.location.href = "./index.html"
+        })
+    </script>
 </body>
+
 </html>
