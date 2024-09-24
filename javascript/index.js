@@ -33,7 +33,7 @@ document
           "bg-white p-4 rounded-md border mt-4 ";
         historyItems.innerHTML = `
                <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
-               <h2 class="font-bold text-xl mb-2">${noakhaliInput} Taka is Donated for famine-2024 at Feni, Bangladesh </h2>`;
+               <h2 class="font-bold text-xl mb-2">${noakhaliInput} Taka is Donate for Flood at Noakhali, Bangladesh </h2>`;
         historyall.insertBefore(historyItems, historyall.firstChild);
       } else {
         alert("insufficent balance");
@@ -76,7 +76,7 @@ document
           "bg-white p-4 rounded-md border mt-4 ";
         historyItems.innerHTML = `
         <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
-        <h2 class="font-bold text-xl mb-2">${feniInput}Donate for Flood Relief in Feni,Bangladesh </h2>`;
+        <h2 class="font-bold text-xl mb-2">${feniInput} Tk is Donate for Flood Relief in Feni,Bangladesh </h2>`;
         historyall.insertBefore(historyItems, historyall.firstChild);
       } else {
         alert("insufficent balance");
@@ -118,7 +118,7 @@ document
           "bg-white p-4 rounded-md border mt-4 ";
         historyItems.innerHTML = `
         <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
-        <h2 class="font-bold text-xl mb-2">${quotaInput}Donate for Flood Relief in Feni,Bangladesh </h2>`;
+        <h2 class="font-bold text-xl mb-2">${quotaInput} Tk is Aid for Injured in the Quota Movement </h2>`;
         historyall.insertBefore(historyItems, historyall.firstChild);
 
         
@@ -141,7 +141,7 @@ const history = document
     donationBtn.classList.remove("bg-btnColor");
 
     document.getElementById("donation-setion").classList.add("hidden");
-    document.getElementById("history").classList.remove("hidden");
+    document.getElementById("history-section").classList.remove("hidden");
   });
 
 document.getElementById("donation-btn").addEventListener("click", function () {
@@ -149,7 +149,7 @@ document.getElementById("donation-btn").addEventListener("click", function () {
   historyBtn.classList.remove("bg-btnColor");
 
   document.getElementById("donation-setion").classList.remove("hidden");
-  document.getElementById("history").classList.add("hidden");
+  document.getElementById("history-section").classList.add("hidden");
 });
 
 
